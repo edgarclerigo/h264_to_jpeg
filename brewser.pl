@@ -65,9 +65,9 @@ else {
 
 sub get_pkg_versions {
   my %pkgs;
-  my @dirs = sort `find /opt/homebew/Cellar -name .brew -maxdepth 3 -type d`;
+  my @dirs = sort `find /opt/homebrew/Cellar -name .brew -maxdepth 3 -type d`;
   for my $dir ( @dirs ) {
-    $pkgs{ $1 } = $2 if( $dir =~ m|^/opt/homebew/Cellar/([^/]+)/([^/]+)/\.brew$| );
+    $pkgs{ $1 } = $2 if( $dir =~ m|^/opt/homebrew/Cellar/([^/]+)/([^/]+)/\.brew$| );
   }
   return \%pkgs;
 }
